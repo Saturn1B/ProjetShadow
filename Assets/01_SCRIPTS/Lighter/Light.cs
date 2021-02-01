@@ -30,4 +30,12 @@ public class Light : MonoBehaviour
         life.Light.Remove(lighter);
         lighter.SetActive(false);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Wind"))
+        {
+            lighter.SetActive(false);
+        }
+    }
 }

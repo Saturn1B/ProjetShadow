@@ -21,5 +21,9 @@ public class DetectLight : MonoBehaviour
         {
             shadowMovement.detectLight = false;
         }
+        if (other.CompareTag("Wind"))
+        {
+            Destroy(shadowMovement.gameObject);
+        }
     }
 }

@@ -23,7 +23,6 @@ public class PickableLighter : MonoBehaviour
     {
         if(Vector3.Distance(player.transform.position, transform.position) <= distance)
         {
-            Debug.Log("pickUp");
             canPickUp = true;
         }
 

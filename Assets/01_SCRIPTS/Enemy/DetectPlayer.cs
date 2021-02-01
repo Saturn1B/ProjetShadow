@@ -15,7 +15,7 @@ public class DetectPlayer : MonoBehaviour
             shadowMovement.detectPlayer = true;
             shadowMovement.player = other.transform;
             MainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
-            StartCoroutine(DownColor());
+            //StartCoroutine(DownColor());
         }
     }
 
@@ -25,7 +25,7 @@ public class DetectPlayer : MonoBehaviour
         {
             shadowMovement.detectPlayer = false;
             shadowMovement.player = null;
-            StartCoroutine(RiseColor());
+            //StartCoroutine(RiseColor());
         }
     }
 

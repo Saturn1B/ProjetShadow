@@ -58,7 +58,6 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x;
         controller.Move(move * moveSpeed * Time.deltaTime);
-
     }
 
     private void Jump()

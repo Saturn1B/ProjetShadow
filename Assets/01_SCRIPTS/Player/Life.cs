@@ -10,7 +10,7 @@ public class Life : MonoBehaviour
     public List<GameObject> Light = new List<GameObject>();
     List<GameObject> Follow = new List<GameObject>();
     List<GameObject> Shadow = new List<GameObject>();
-    float mentalGain = -0.01f;
+    float mentalGain = -0.02f;
     public Slider mentalHealthSlider;
     public GameObject CheckPoint;
 
@@ -57,7 +57,7 @@ public class Life : MonoBehaviour
         }
         else if (Light.Count <= 0 && Follow.Count <= 0 && Shadow.Count <= 0)
         {
-            mentalGain = -0.01f;
+            mentalGain = -0.02f;
         }
         #endregion
 
@@ -69,7 +69,7 @@ public class Life : MonoBehaviour
         {
             if(CheckPoint != null)
             {
-                transform.position = new Vector3(CheckPoint.transform.position.x, transform.position.y, transform.position.z);
+                transform.position = CheckPoint.transform.position;//new Vector3(CheckPoint.transform.position.x, transform.position.y, transform.position.z);
             }
             else
             {
@@ -108,6 +108,11 @@ public class Life : MonoBehaviour
                 Destroy(CheckPoint);
             }
             CheckPoint = other.gameObject;
+        }
+
+        if (other.CompareTag("Death"))
+        {
+            currentMentalHealth = 0;
         }
     }
 

@@ -5,6 +5,8 @@ using UnityEngine;
 public class LighterDetection : MonoBehaviour
 {
     public bool canLight = false;
+    lightState lighten = lightState.OFF;
+    enum lightState { OFF, ON}
     public GameObject Obj;
     public ParticleSystem Fire;
 
@@ -15,17 +17,27 @@ public class LighterDetection : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
+                lighten = lightState.ON;
                 StartCoroutine(EnlightObject());
             }
+        }
+
+        switch (lighten)
+        {
+            case lightState.OFF:
+                    break;
+            case lightState.ON:
+                gameObject.transform.parent.gameObject.tag = "Light";
+                break;
+            default:
+                break;
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("salut");
         if (other.CompareTag("Lighter"))
         {
-            Debug.Log("salut2");
             canLight = true;
         }
     }

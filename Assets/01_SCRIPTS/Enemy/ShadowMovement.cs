@@ -35,13 +35,20 @@ public class ShadowMovement : MonoBehaviour
         }
         if (runAway)
         {
-            if(LightSource.transform.position.x > transform.position.x && first)
+            if(LightSource != null && LightSource.transform.position.x > transform.position.x && first)
             {
                 orientation = -orientation;
                 first = false;
             }
             transform.position += new Vector3(speed * Time.deltaTime * orientation, 0, 0);
-            if(!LightSource.activeSelf)
+            if(LightSource == null)
+            {
+                runAway = false;
+                orientation = 1;
+                first = true;
+                LightSource = null;
+            }
+            else if(LightSource != null && !LightSource.activeSelf)
             {
                 runAway = false;
                 orientation = 1;
