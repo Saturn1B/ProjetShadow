@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Light : MonoBehaviour
@@ -8,7 +9,7 @@ public class Light : MonoBehaviour
     public int lightNumber;
     public float lightTimer;
     public GameObject lighter;
-    public TextMeshProUGUI lightText;
+    public Text lightText;
     public Life life;
 
     // Update is called once per frame

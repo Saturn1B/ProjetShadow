@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class PickableLighter : MonoBehaviour
@@ -10,13 +11,13 @@ public class PickableLighter : MonoBehaviour
     public GameObject player;
     bool canPickUp = false;
     public Light lighter;
-    public TextMeshProUGUI lightText;
+    public Text lightText;
 
     void Start()
     {
         player = GameObject.Find("Player");
         lighter = player.GetComponent<Light>();
-        lightText = GameObject.Find("LightNumber").GetComponent<TextMeshProUGUI>();
+        lightText = GameObject.Find("LightNumber").GetComponent<Text>();
     }
 
     void Update()
