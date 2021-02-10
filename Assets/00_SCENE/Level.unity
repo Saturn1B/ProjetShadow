@@ -2877,6 +2877,24 @@ Transform:
   m_Father: {fileID: 1726275543}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &996324001 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 97c3ce89189b89d438449eb4717fc869, type: 3}
+  m_PrefabInstance: {fileID: 1384863184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &996324002
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996324001}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.59017354, y: 1.3248125, z: 0.033814188}
+  m_Center: {x: -0.29508582, y: 0.6624046, z: -0.01690611}
 --- !u!1001 &999757673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3296,6 +3314,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+--- !u!1 &1066102815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 97c3ce89189b89d438449eb4717fc869, type: 3}
+  m_PrefabInstance: {fileID: 1876983721}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1066102816
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066102815}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5901736, y: 1.3248125, z: 0.033814188}
+  m_Center: {x: -0.29508585, y: 0.6624046, z: -0.01690611}
 --- !u!1001 &1069927884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3796,6 +3832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Corridor_Ground (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
 --- !u!1001 &1191277096
@@ -4246,6 +4286,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Ground (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
@@ -4760,6 +4804,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 97c3ce89189b89d438449eb4717fc869, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Ground2 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 97c3ce89189b89d438449eb4717fc869, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97c3ce89189b89d438449eb4717fc869, type: 3}
@@ -5441,6 +5489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Corridor_Ground (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
 --- !u!1001 &1601264822
@@ -5661,6 +5713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Corridor_Ground (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
 --- !u!4 &1642851322 stripped
@@ -5804,6 +5860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Corridor_Ground (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
 --- !u!1 &1655669130 stripped
@@ -5900,6 +5960,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Ground (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
@@ -6112,6 +6176,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Ground (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
@@ -6697,6 +6765,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 97c3ce89189b89d438449eb4717fc869, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Ground2 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 97c3ce89189b89d438449eb4717fc869, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97c3ce89189b89d438449eb4717fc869, type: 3}
@@ -7296,6 +7368,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Corridor_Ground (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
 --- !u!1 &2073802130 stripped
@@ -7465,6 +7541,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Ground (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bd4d978bc8a21247a5e3b77858c3fc6, type: 3}
