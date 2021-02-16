@@ -34,9 +34,25 @@ public class Light : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Wind"))
+        if (other.CompareTag("Sprinkler"))
         {
-            lighter.SetActive(false);
+            if(other.GetComponent<Sprinkler>().State == Sprinkler.STATE.ON)
+            {
+                lighter.SetActive(false);
+
+            }
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Sprinkler"))
+        {
+            if (other.GetComponent<Sprinkler>().State == Sprinkler.STATE.ON)
+            {
+                lighter.SetActive(false);
+
+            }
         }
     }
 }

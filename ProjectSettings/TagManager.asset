@@ -10,8 +10,9 @@ TagManager:
   - Follow
   - Enemy
   - Checkpoint
-  - Wind
   - Death
+  - Sprinkler
+  - Wind
   layers:
   - Default
   - TransparentFX
