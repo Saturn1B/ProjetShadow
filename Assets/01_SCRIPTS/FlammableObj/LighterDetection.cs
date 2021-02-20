@@ -9,6 +9,7 @@ public class LighterDetection : MonoBehaviour
     enum lightState { OFF, ON}
     public GameObject Obj;
     public ParticleSystem Fire;
+    public GameObject LightSource;
 
     // Update is called once per frame
     void Update()
@@ -27,7 +28,7 @@ public class LighterDetection : MonoBehaviour
             case lightState.OFF:
                     break;
             case lightState.ON:
-                gameObject.transform.parent.gameObject.tag = "Light";
+                LightSource.SetActive(true);
                 break;
             default:
                 break;

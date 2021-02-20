@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
-    [SerializeField] private float walkSpeed;
-    float moveSpeed;
+    public float walkSpeed;
+    public float fearSpeed;
+    public float sprintSpeed;
+    public float moveSpeed;
 
     Vector3 velocity;
     [SerializeField] private float gravity;

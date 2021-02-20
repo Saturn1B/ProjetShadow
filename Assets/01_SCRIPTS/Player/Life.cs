@@ -13,6 +13,9 @@ public class Life : MonoBehaviour
     float mentalGain = -0.02f;
     public Slider mentalHealthSlider;
     public GameObject CheckPoint;
+    public PlayerMovement playerMovement;
+
+    float targetSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -28,38 +31,49 @@ public class Life : MonoBehaviour
         if (Light.Count > 0 && Follow.Count <= 0 && Shadow.Count <= 0)
         {
             mentalGain = 0.1f;
+            targetSpeed = playerMovement.walkSpeed;
         }
         else if (Light.Count <= 0 && Follow.Count > 0 && Shadow.Count <= 0)
         {
             mentalGain = -0.1f;
-
+            targetSpeed = playerMovement.fearSpeed;
         }
         else if (Light.Count <= 0 && Follow.Count <= 0 && Shadow.Count > 0)
         {
-            mentalGain = -0.5f;
-
+            mentalGain = -1f;
+            targetSpeed = playerMovement.sprintSpeed;
         }
         else if (Light.Count > 0 && Follow.Count > 0 && Shadow.Count <= 0)
         {
             mentalGain = 0.1f;
+            targetSpeed = playerMovement.walkSpeed;
         }
         else if (Light.Count > 0 && Follow.Count <= 0 && Shadow.Count > 0)
         {
             mentalGain = 0.1f;
+            targetSpeed = playerMovement.walkSpeed;
         }
         else if (Light.Count <= 0 && Follow.Count > 0 && Shadow.Count > 0)
         {
-            mentalGain = -0.5f;
+            mentalGain = -1f;
+            targetSpeed = playerMovement.sprintSpeed;
         }
         else if (Light.Count > 0 && Follow.Count > 0 && Shadow.Count > 0)
         {
             mentalGain = 0.1f;
+            targetSpeed = playerMovement.walkSpeed;
         }
         else if (Light.Count <= 0 && Follow.Count <= 0 && Shadow.Count <= 0)
         {
             mentalGain = -0.02f;
+            targetSpeed = playerMovement.walkSpeed;
         }
         #endregion
+
+        if (playerMovement.moveSpeed != targetSpeed)
+        {
+            StartCoroutine(SpeedChange(targetSpeed));
+        }
 
         if (currentMentalHealth > 0 && currentMentalHealth <= mentalHealthMax)
         {
@@ -136,5 +150,27 @@ public class Life : MonoBehaviour
     {
         yield return new WaitForSeconds(0.02f);
         currentMentalHealth = mentalHealthMax;
+    }
+
+    IEnumerator SpeedChange(float targetSpeed)
+    {
+        if (playerMovement.moveSpeed > targetSpeed)
+        {
+            while(playerMovement.moveSpeed > targetSpeed)
+            {
+                playerMovement.moveSpeed -= 0.001f;
+                yield return new WaitForSeconds(Time.deltaTime);
+            }
+            playerMovement.moveSpeed = targetSpeed;
+        }
+        else if (playerMovement.moveSpeed < targetSpeed)
+        {
+            while (playerMovement.moveSpeed < targetSpeed)
+            {
+                playerMovement.moveSpeed += 0.001f;
+                yield return new WaitForSeconds(Time.deltaTime);
+            }
+            playerMovement.moveSpeed = targetSpeed;
+        }
     }
 }

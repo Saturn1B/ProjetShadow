@@ -24,7 +24,7 @@ public class DetectPlayer : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             shadowMovement.detectPlayer = false;
-            shadowMovement.player = null;
+            //shadowMovement.player = null;
             //StartCoroutine(RiseColor());
         }
     }

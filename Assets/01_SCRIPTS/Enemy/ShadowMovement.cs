@@ -29,7 +29,7 @@ public class ShadowMovement : MonoBehaviour
             Vector3 targetPos = new Vector3(player.position.x, transform.position.y, transform.position.z);
             transform.position = Vector3.MoveTowards(transform.position, targetPos, speed*Time.deltaTime);
         }
-        else if (detectPlayer && detectLight && !runAway)
+        else if (detectPlayer && detectLight)
         {
             runAway = true;
         }
@@ -40,7 +40,8 @@ public class ShadowMovement : MonoBehaviour
                 orientation = -orientation;
                 first = false;
             }
-            transform.position += new Vector3(speed * Time.deltaTime * orientation, 0, 0);
+
+
             if(LightSource == null)
             {
                 runAway = false;
@@ -55,12 +56,28 @@ public class ShadowMovement : MonoBehaviour
                 first = true;
                 LightSource = null;
             }
-            else if(Vector3.Distance(transform.position, LightSource.transform.position) > distanceFromLight)
+            else if((player.position.x > transform.position.x && LightSource.transform.position.x < transform.position.x) || (player.position.x < transform.position.x && LightSource.transform.position.x > transform.position.x))
             {
-                runAway = false;
+                if (detectPlayer)
+                {
+                    runAway = false;
+                    orientation = 1;
+                    first = true;
+                    LightSource = null;
+                }
+            }
+
+            if(LightSource != null && Vector3.Distance(transform.position, LightSource.transform.position) < distanceFromLight)
+            {
+                transform.position += new Vector3((speed+5) * Time.deltaTime * orientation, 0, 0);
+                /*runAway = false;
                 orientation = 1;
                 first = true;
-                LightSource = null;
+                LightSource = null;*/
+            }
+            else if(LightSource != null && Vector3.Distance(transform.position, LightSource.transform.position) > distanceFromLight)
+            {
+                transform.position += new Vector3((speed+5) * Time.deltaTime * -orientation, 0, 0);
             }
         }
     }
