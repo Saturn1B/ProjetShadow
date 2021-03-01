@@ -10,13 +10,13 @@ public class PickableLighter : MonoBehaviour
     public float distance;
     public GameObject player;
     bool canPickUp = false;
-    public Light lighter;
+    public Lighter lighter;
     public Text lightText;
 
     void Start()
     {
         player = GameObject.Find("Player");
-        lighter = player.GetComponent<Light>();
+        lighter = player.GetComponent<Lighter>();
         lightText = GameObject.Find("LightNumber").GetComponent<Text>();
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Light : MonoBehaviour
+public class Lighter : MonoBehaviour
 {
     public int lightNumber;
     public float lightTimer;
