@@ -6,10 +6,12 @@ public class FlashingLight : MonoBehaviour
 {
     
     public Light lightSource;
+    Life PlayerLife;
 
     // Start is called before the first frame update
     void Start()
     {
+        PlayerLife = GameObject.Find("Player").GetComponent<Life>();
         StartCoroutine(Flash());
     }
 
@@ -26,6 +28,7 @@ public class FlashingLight : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            PlayerLife.Light.Remove(gameObject);
             gameObject.SetActive(false);
         }
     }
