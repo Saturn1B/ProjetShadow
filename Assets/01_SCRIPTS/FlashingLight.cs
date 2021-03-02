@@ -28,7 +28,7 @@ public class FlashingLight : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerLife.Light.Remove(gameObject);
+            PlayerLife.Light.Remove(gameObject.transform.GetChild(0).gameObject);
             gameObject.SetActive(false);
         }
     }
