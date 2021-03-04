@@ -79,11 +79,15 @@ public class Life : MonoBehaviour
         {
             currentMentalHealth += mentalGain;
         }
-        else if(currentMentalHealth <= 0)
+        else if(currentMentalHealth <= 1)
         {
+            Debug.Log("va te faire");
             if(CheckPoint != null)
             {
+                Debug.Log("enculer");
+                playerMovement.enabled = false;
                 transform.position = CheckPoint.transform.position;//new Vector3(CheckPoint.transform.position.x, transform.position.y, transform.position.z);
+                playerMovement.enabled = true;
             }
             else
             {

@@ -24,6 +24,7 @@ public class ShadowMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (detectPlayer && !detectLight && !runAway)
         {
             Vector3 targetPos = new Vector3(player.position.x, transform.position.y, transform.position.z);
@@ -42,7 +43,7 @@ public class ShadowMovement : MonoBehaviour
             }
 
 
-            if(LightSource == null)
+            if(LightSource == null || LightSource.activeSelf == false || (LightSource.transform.parent != null && LightSource.transform.parent.gameObject.activeSelf == false))
             {
                 runAway = false;
                 orientation = 1;
