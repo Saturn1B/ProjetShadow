@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameObject monster = Instantiate(MonsterPrefab, spawnPosition, Quaternion.identity);
+            GameObject monster = Instantiate(MonsterPrefab, transform.position + spawnPosition, Quaternion.identity);
             foreach (GameObject light in Lights)
             {
                 monster.transform.GetChild(2).GetComponent<ParticleSystem>().trigger.AddCollider(light.transform);

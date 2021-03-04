@@ -46,12 +46,12 @@ public class Life : MonoBehaviour
         else if (Light.Count > 0 && Follow.Count > 0 && Shadow.Count <= 0)
         {
             mentalGain = 0.1f;
-            targetSpeed = playerMovement.walkSpeed;
+            targetSpeed = playerMovement.fearSpeed;
         }
         else if (Light.Count > 0 && Follow.Count <= 0 && Shadow.Count > 0)
         {
             mentalGain = 0.1f;
-            targetSpeed = playerMovement.walkSpeed;
+            targetSpeed = playerMovement.sprintSpeed;
         }
         else if (Light.Count <= 0 && Follow.Count > 0 && Shadow.Count > 0)
         {
@@ -81,17 +81,17 @@ public class Life : MonoBehaviour
         }
         else if(currentMentalHealth <= 1)
         {
-            Debug.Log("va te faire");
             if(CheckPoint != null)
             {
-                Debug.Log("enculer");
                 playerMovement.enabled = false;
                 transform.position = CheckPoint.transform.position;//new Vector3(CheckPoint.transform.position.x, transform.position.y, transform.position.z);
                 playerMovement.enabled = true;
             }
             else
             {
+                playerMovement.enabled = false;
                 transform.position = Vector3.zero;
+                playerMovement.enabled = true;
             }
             //currentMentalHealth = mentalHealthMax;
             StartCoroutine(RegenMental());
@@ -163,7 +163,7 @@ public class Life : MonoBehaviour
             while(playerMovement.moveSpeed > targetSpeed)
             {
                 playerMovement.moveSpeed -= 0.001f;
-                yield return new WaitForSeconds(Time.deltaTime);
+                yield return new WaitForSeconds(Time.deltaTime / 2);
             }
             playerMovement.moveSpeed = targetSpeed;
         }
@@ -172,7 +172,7 @@ public class Life : MonoBehaviour
             while (playerMovement.moveSpeed < targetSpeed)
             {
                 playerMovement.moveSpeed += 0.001f;
-                yield return new WaitForSeconds(Time.deltaTime);
+                yield return new WaitForSeconds(Time.deltaTime / 2);
             }
             playerMovement.moveSpeed = targetSpeed;
         }

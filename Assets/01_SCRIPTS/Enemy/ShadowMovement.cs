@@ -24,6 +24,10 @@ public class ShadowMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(LightSource == null || LightSource.activeSelf == false || (LightSource.transform.parent != null && LightSource.transform.parent.gameObject.activeSelf == false))
+        {
+            detectLight = false;
+        }
 
         if (detectPlayer && !detectLight && !runAway)
         {
