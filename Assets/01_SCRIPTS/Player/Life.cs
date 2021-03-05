@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class Life : MonoBehaviour
 {
@@ -16,6 +18,11 @@ public class Life : MonoBehaviour
     public PlayerMovement playerMovement;
 
     float targetSpeed;
+
+    private void Awake()
+    {
+        StartCoroutine(StartLevel());
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -81,20 +88,21 @@ public class Life : MonoBehaviour
         }
         else if(currentMentalHealth <= 1)
         {
+            SceneManager.LoadScene(0);
             if(CheckPoint != null)
             {
-                playerMovement.enabled = false;
-                transform.position = CheckPoint.transform.position;//new Vector3(CheckPoint.transform.position.x, transform.position.y, transform.position.z);
-                playerMovement.enabled = true;
+                //playerMovement.enabled = false;
+                //transform.position = CheckPoint.transform.position;//new Vector3(CheckPoint.transform.position.x, transform.position.y, transform.position.z);
+                //playerMovement.enabled = true;
             }
             else
             {
-                playerMovement.enabled = false;
-                transform.position = Vector3.zero;
-                playerMovement.enabled = true;
+                //playerMovement.enabled = false;
+                //transform.position = Vector3.zero;
+                //playerMovement.enabled = true;
             }
             //currentMentalHealth = mentalHealthMax;
-            StartCoroutine(RegenMental());
+            //StartCoroutine(RegenMental());
         }
         else if(currentMentalHealth > mentalHealthMax)
         {
@@ -123,9 +131,13 @@ public class Life : MonoBehaviour
         {
             if(CheckPoint != null && CheckPoint != other.gameObject)
             {
-                Destroy(CheckPoint);
+                CheckPoint.SetActive(false);
             }
             CheckPoint = other.gameObject;
+            PlayerPrefs.SetFloat("X", CheckPoint.transform.position.x);
+            PlayerPrefs.SetFloat("Y", transform.position.y);
+            PlayerPrefs.SetFloat("Z", transform.position.z);
+            Debug.Log(PlayerPrefs.GetFloat("X") + " " + PlayerPrefs.GetFloat("Y") + " " + PlayerPrefs.GetFloat("Z"));
         }
 
         if (other.CompareTag("Death"))
@@ -175,6 +187,31 @@ public class Life : MonoBehaviour
                 yield return new WaitForSeconds(Time.deltaTime / 2);
             }
             playerMovement.moveSpeed = targetSpeed;
+        }
+    }
+
+    IEnumerator StartLevel()
+    {
+        if (PlayerPrefs.GetFloat("X") != 0)
+        {
+            playerMovement.enabled = false;
+            Debug.Log(PlayerPrefs.GetFloat("X") + " " + PlayerPrefs.GetFloat("Y") + " " + PlayerPrefs.GetFloat("Z"));
+            transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+            yield return new WaitForSeconds(0.5f);
+            playerMovement.enabled = true;
+        }
+    }
+}
+
+[CustomEditor(typeof(Life))]
+class LifeEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+        if (GUILayout.Button("Reset PlayerPref"))
+        {
+            PlayerPrefs.DeleteAll();
         }
     }
 }

@@ -9,6 +9,11 @@ public class CameraFollow : MonoBehaviour
     public Vector3 offSet;
     Vector3 velocity = Vector3.zero;
 
+    private void Start()
+    {
+        transform.position = new Vector3(player.position.x, player.position.y + offSet.y, transform.position.z);
+    }
+
     void LateUpdate()
     {
         Vector3 desiredPosition = player.position + offSet;
