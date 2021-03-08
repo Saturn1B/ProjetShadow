@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,9 +20,12 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float jumpHight;
 
+    public ControlSettings control;
+
     private void Start()
     {
         moveSpeed = walkSpeed;
+        control = GameObject.Find("ControlSettings").GetComponent<ControlSettings>();
     }
 
     // Update is called once per frame
@@ -46,7 +50,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void Movement()
     {
-        float x = Input.GetAxis("Horizontal");
+        float x = 0;
+
+        if (control.Right.ReadValue<float>() > 0)
+        {
+            x = 1;
+        }
+        else if (control.Left.ReadValue<float>() > 0)
+        {
+            x = -1;
+        }
+        else
+        {
+            x = 0;
+        }
 
         if(x > 0)
         {
@@ -64,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
+        if (control.Jump.triggered)
         {
             velocity.y = Mathf.Sqrt(jumpHight * -2 * gravity);
         }

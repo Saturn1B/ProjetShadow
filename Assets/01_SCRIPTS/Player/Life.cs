@@ -88,7 +88,7 @@ public class Life : MonoBehaviour
         }
         else if(currentMentalHealth <= 1)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
             if(CheckPoint != null)
             {
                 //playerMovement.enabled = false;

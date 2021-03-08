@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class LighterDetection : MonoBehaviour
 {
@@ -12,9 +13,12 @@ public class LighterDetection : MonoBehaviour
     public GameObject LightSource;
     Life life;
 
+    public ControlSettings control;
+
     private void Awake()
     {
         life = GameObject.Find("Player").GetComponent<Life>();
+        control = GameObject.Find("ControlSettings").GetComponent<ControlSettings>();
     }
 
     // Update is called once per frame
@@ -22,7 +26,7 @@ public class LighterDetection : MonoBehaviour
     {
         if (canLight)
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (control.Flame.triggered)
             {
                 lighten = lightState.ON;
                 StartCoroutine(EnlightObject());

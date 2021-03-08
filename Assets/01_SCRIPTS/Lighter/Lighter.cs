@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class Lighter : MonoBehaviour
 {
@@ -12,10 +13,17 @@ public class Lighter : MonoBehaviour
     public Text lightText;
     public Life life;
 
+    public ControlSettings control;
+
+    private void Start()
+    {
+        control = GameObject.Find("ControlSettings").GetComponent<ControlSettings>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if(lightNumber > 0 && Input.GetKeyDown(KeyCode.RightShift) && !lighter.activeSelf)
+        if(lightNumber > 0 && control.Light.triggered && !lighter.activeSelf)
         {
             lightNumber--;
             lightText.text = lightNumber.ToString();
