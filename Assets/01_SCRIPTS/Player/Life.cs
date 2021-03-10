@@ -16,6 +16,7 @@ public class Life : MonoBehaviour
     public Slider mentalHealthSlider;
     public GameObject CheckPoint;
     public PlayerMovement playerMovement;
+    public bool isPaused;
 
     float targetSpeed;
 
@@ -82,7 +83,7 @@ public class Life : MonoBehaviour
             StartCoroutine(SpeedChange(targetSpeed));
         }
 
-        if (currentMentalHealth > 0 && currentMentalHealth <= mentalHealthMax)
+        if (currentMentalHealth > 0 && currentMentalHealth <= mentalHealthMax && !isPaused)
         {
             currentMentalHealth += mentalGain;
         }

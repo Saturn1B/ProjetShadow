@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (control.Jump.triggered)
+        if (control.Jump.triggered && isGrounded())
         {
             velocity.y = Mathf.Sqrt(jumpHight * -2 * gravity);
         }
