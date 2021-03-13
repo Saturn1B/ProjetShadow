@@ -11901,7 +11901,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 74cf26b4c8b7d21498b1224e2525c83c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: b8631f31311f930439082a3824cafa31, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 74cf26b4c8b7d21498b1224e2525c83c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 8832725224115948559, guid: a7f3146beff92d84495cdce8374acd6b, type: 3}
     - target: {fileID: 919132149155446097, guid: 74cf26b4c8b7d21498b1224e2525c83c, type: 3}
       propertyPath: m_Name
       value: SM_Reception_table (2)
@@ -22781,7 +22785,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 74cf26b4c8b7d21498b1224e2525c83c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: b8631f31311f930439082a3824cafa31, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 74cf26b4c8b7d21498b1224e2525c83c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 8832725224115948559, guid: a7f3146beff92d84495cdce8374acd6b, type: 3}
     - target: {fileID: 919132149155446097, guid: 74cf26b4c8b7d21498b1224e2525c83c, type: 3}
       propertyPath: m_Name
       value: SM_Reception_table (1)
@@ -30302,7 +30310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 74cf26b4c8b7d21498b1224e2525c83c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 15.402961
+      value: 13.378594
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 74cf26b4c8b7d21498b1224e2525c83c, type: 3}
       propertyPath: m_LocalScale.y
@@ -30322,7 +30330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 74cf26b4c8b7d21498b1224e2525c83c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.2300005
+      value: -4.71
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 74cf26b4c8b7d21498b1224e2525c83c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30355,7 +30363,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 74cf26b4c8b7d21498b1224e2525c83c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: b8631f31311f930439082a3824cafa31, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 74cf26b4c8b7d21498b1224e2525c83c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 8832725224115948559, guid: a7f3146beff92d84495cdce8374acd6b, type: 3}
     - target: {fileID: 919132149155446097, guid: 74cf26b4c8b7d21498b1224e2525c83c, type: 3}
       propertyPath: m_Name
       value: SM_Reception_table
