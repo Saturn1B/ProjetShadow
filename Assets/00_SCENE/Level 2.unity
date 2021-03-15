@@ -14615,7 +14615,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: c2ebc0a859231034d98e7302c5105313, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2329098449242126572, guid: 3ef9e1cfcd73f6d4281abeb7ae0e8266, type: 3}
     - target: {fileID: 919132149155446097, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
       propertyPath: m_Name
       value: SM_Reception_Painting (2)
@@ -27959,7 +27963,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: c795da5e1b81e0a42b71512b63d94f47, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2329098449242126572, guid: 3ef9e1cfcd73f6d4281abeb7ae0e8266, type: 3}
     - target: {fileID: 919132149155446097, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
       propertyPath: m_Name
       value: SM_Reception_Painting (4)
@@ -39058,7 +39066,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: c2ebc0a859231034d98e7302c5105313, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2329098449242126572, guid: 3ef9e1cfcd73f6d4281abeb7ae0e8266, type: 3}
     - target: {fileID: 919132149155446097, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
       propertyPath: m_Name
       value: SM_Reception_Painting (5)
@@ -48902,7 +48914,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: c795da5e1b81e0a42b71512b63d94f47, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2329098449242126572, guid: 3ef9e1cfcd73f6d4281abeb7ae0e8266, type: 3}
     - target: {fileID: 919132149155446097, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
       propertyPath: m_Name
       value: SM_Reception_Painting (1)
@@ -73396,7 +73412,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: fc800d6bbf311814fab55ddbd28bfd92, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2329098449242126572, guid: 3ef9e1cfcd73f6d4281abeb7ae0e8266, type: 3}
     - target: {fileID: 919132149155446097, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
       propertyPath: m_Name
       value: SM_Reception_Painting (3)
@@ -78466,7 +78486,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: fc800d6bbf311814fab55ddbd28bfd92, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2329098449242126572, guid: 3ef9e1cfcd73f6d4281abeb7ae0e8266, type: 3}
     - target: {fileID: 919132149155446097, guid: 80a766b94cd2c2647a723f9ae4dd8d3c, type: 3}
       propertyPath: m_Name
       value: SM_Reception_Painting
