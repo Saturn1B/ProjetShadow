@@ -368,7 +368,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (7)
@@ -3617,7 +3621,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (3)
@@ -16316,7 +16324,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (13)
@@ -23499,7 +23511,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (11)
@@ -40318,7 +40334,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (18)
@@ -41183,7 +41199,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (2)
@@ -46359,7 +46379,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (19)
@@ -46515,7 +46539,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (12)
@@ -47661,7 +47689,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (8)
@@ -51549,7 +51581,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (4)
@@ -52514,7 +52550,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (16)
@@ -57108,7 +57148,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (6)
@@ -61136,7 +61180,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (1)
@@ -74000,7 +74048,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (10)
@@ -89881,7 +89933,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (5)
@@ -91648,7 +91704,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (15)
@@ -92173,7 +92233,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 7cb3b8cf767f3ed42b706fba4c1b0b23, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6d06948543230e7488890a5c9c359283, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1124132663925078091, guid: 2669fa9c45b9b074896b2a00d56c4856, type: 3}
     - target: {fileID: 919132149155446097, guid: 6d06948543230e7488890a5c9c359283, type: 3}
       propertyPath: m_Name
       value: SM_Corridor_Chair (14)
