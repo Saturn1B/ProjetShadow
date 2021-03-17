@@ -18,6 +18,7 @@ public class Lighter : MonoBehaviour
     private void Start()
     {
         control = GameObject.Find("ControlSettings").GetComponent<ControlSettings>();
+        lightText.text = lightNumber.ToString();
     }
 
     // Update is called once per frame

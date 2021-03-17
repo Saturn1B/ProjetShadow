@@ -16,12 +16,17 @@ public class Life : MonoBehaviour
     public Slider mentalHealthSlider;
     public GameObject CheckPoint;
     public PlayerMovement playerMovement;
+    public Lighter lighter;
+    public Camera camera;
     public bool isPaused;
 
     float targetSpeed;
+    float FOV;
 
     private void Awake()
     {
+        lighter = gameObject.GetComponent<Lighter>();
+        camera = GameObject.Find("Main Camera").GetComponent<Camera>();
         StartCoroutine(StartLevel());
     }
 
@@ -40,43 +45,56 @@ public class Life : MonoBehaviour
         {
             mentalGain = 0.1f;
             targetSpeed = playerMovement.walkSpeed;
+            FOV = 60;
         }
         else if (Light.Count <= 0 && Follow.Count > 0 && Shadow.Count <= 0)
         {
             mentalGain = -0.1f;
             targetSpeed = playerMovement.fearSpeed;
+            FOV = 55;
         }
         else if (Light.Count <= 0 && Follow.Count <= 0 && Shadow.Count > 0)
         {
-            mentalGain = -1f;
+            mentalGain = -5f;
             targetSpeed = playerMovement.sprintSpeed;
+            FOV = 55;
         }
         else if (Light.Count > 0 && Follow.Count > 0 && Shadow.Count <= 0)
         {
             mentalGain = 0.1f;
             targetSpeed = playerMovement.fearSpeed;
+            FOV = 60;
         }
         else if (Light.Count > 0 && Follow.Count <= 0 && Shadow.Count > 0)
         {
             mentalGain = 0.1f;
             targetSpeed = playerMovement.sprintSpeed;
+            FOV = 60;
         }
         else if (Light.Count <= 0 && Follow.Count > 0 && Shadow.Count > 0)
         {
-            mentalGain = -1f;
+            mentalGain = -5f;
             targetSpeed = playerMovement.sprintSpeed;
+            FOV = 55;
         }
         else if (Light.Count > 0 && Follow.Count > 0 && Shadow.Count > 0)
         {
             mentalGain = 0.1f;
             targetSpeed = playerMovement.walkSpeed;
+            FOV = 60;
         }
         else if (Light.Count <= 0 && Follow.Count <= 0 && Shadow.Count <= 0)
         {
             mentalGain = -0.02f;
             targetSpeed = playerMovement.walkSpeed;
+            FOV = 60;
         }
         #endregion
+
+        if(camera.fieldOfView != FOV)
+        {
+            StartCoroutine(FOVChange(FOV));
+        }
 
         if (playerMovement.moveSpeed != targetSpeed)
         {
@@ -138,6 +156,7 @@ public class Life : MonoBehaviour
             PlayerPrefs.SetFloat("X", CheckPoint.transform.position.x);
             PlayerPrefs.SetFloat("Y", transform.position.y);
             PlayerPrefs.SetFloat("Z", transform.position.z);
+            PlayerPrefs.SetInt("Light", lighter.lightNumber);
             Debug.Log(PlayerPrefs.GetFloat("X") + " " + PlayerPrefs.GetFloat("Y") + " " + PlayerPrefs.GetFloat("Z"));
         }
 
@@ -191,8 +210,35 @@ public class Life : MonoBehaviour
         }
     }
 
+    IEnumerator FOVChange(float fOV)
+    {
+        if (camera.fieldOfView > fOV)
+        {
+            while (camera.fieldOfView > fOV)
+            {
+                camera.fieldOfView -= 0.001f;
+                yield return new WaitForSeconds(Time.deltaTime / 2);
+            }
+            camera.fieldOfView = fOV;
+        }
+        else if (camera.fieldOfView < fOV)
+        {
+            while (camera.fieldOfView < fOV)
+            {
+                camera.fieldOfView += 0.001f;
+                yield return new WaitForSeconds(Time.deltaTime / 2);
+            }
+            camera.fieldOfView = fOV;
+        }
+    }
+
     IEnumerator StartLevel()
     {
+        if (PlayerPrefs.GetInt("Light") != 0)
+        {
+            lighter.lightNumber = PlayerPrefs.GetInt("Light");
+        }
+
         if (PlayerPrefs.GetFloat("X") != 0)
         {
             playerMovement.enabled = false;
