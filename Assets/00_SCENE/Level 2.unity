@@ -70975,10 +70975,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1626401412}
-  - component: {fileID: 1626401411}
   - component: {fileID: 1626401410}
   - component: {fileID: 1626401409}
   - component: {fileID: 1626401408}
+  - component: {fileID: 1626401411}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -71047,7 +71047,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
-  groundDistance: 0.1
+  groundDistance: 0.4
   jumpHight: 1.5
   control: {fileID: 1982734362}
 --- !u!143 &1626401411
@@ -71061,13 +71061,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2.5
+  m_Height: 4
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.6, z: 0}
 --- !u!4 &1626401412
 Transform:
   m_ObjectHideFlags: 0
