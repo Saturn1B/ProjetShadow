@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Audio;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class PlayerMovement : MonoBehaviour
     public float fearSpeed;
     public float sprintSpeed;
     public float moveSpeed;
+
+    public float walkFootSpeed;
+    public float fearFootSpeed;
+    public float sprintFootSpeed;
+    public float moveFootSpeed;
 
     Vector3 velocity;
     [SerializeField] private float gravity;
@@ -22,9 +28,14 @@ public class PlayerMovement : MonoBehaviour
 
     public ControlSettings control;
 
+    public AudioClip[] foots;
+    public AudioSource footSteps;
+    bool isPressed = false;
+
     private void Start()
     {
         moveSpeed = walkSpeed;
+        moveFootSpeed = walkFootSpeed;
         control = GameObject.Find("ControlSettings").GetComponent<ControlSettings>();
     }
 
@@ -65,6 +76,19 @@ public class PlayerMovement : MonoBehaviour
             x = 0;
         }
 
+        if(x != 0 && !isPressed)
+        {
+            StopAllCoroutines();
+            StartCoroutine(Steps());
+            isPressed = true;
+        }
+        else if(x == 0 && isPressed)
+        {
+            footSteps.Stop();
+            StopAllCoroutines();
+            isPressed = false;
+        }
+
         if(x > 0)
         {
             transform.GetChild(0).transform.eulerAngles = new Vector3(0, 0, 0);
@@ -90,5 +114,37 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded()
     {
         return Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+    }
+
+    IEnumerator InBetweenStep()
+    {
+        Debug.Log("steps");
+        while (control.Right.ReadValue<float>() > 0 || control.Left.ReadValue<float>() > 0)
+        {
+            StartCoroutine(Steps());
+            yield return new WaitForSeconds(moveFootSpeed);
+        }
+    }
+
+    IEnumerator Steps()
+    {
+        if(control.Right.ReadValue<float>() > 0 || control.Left.ReadValue<float>() > 0)
+        {
+            footSteps.Stop();
+            footSteps.clip = foots[Random.Range(0, foots.Length)];
+            footSteps.Play();
+        }
+        yield return new WaitForSeconds(moveFootSpeed/2);
+        if (control.Right.ReadValue<float>() > 0 || control.Left.ReadValue<float>() > 0)
+        {
+            footSteps.Stop();
+            footSteps.clip = foots[Random.Range(0, foots.Length)];
+            footSteps.Play();
+        }
+        yield return new WaitForSeconds(moveFootSpeed / 2);
+        if (control.Right.ReadValue<float>() > 0 || control.Left.ReadValue<float>() > 0)
+        {
+            StartCoroutine(Steps());
+        }
     }
 }

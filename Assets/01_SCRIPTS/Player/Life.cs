@@ -45,48 +45,56 @@ public class Life : MonoBehaviour
         {
             mentalGain = 0.1f;
             targetSpeed = playerMovement.walkSpeed;
+            playerMovement.moveFootSpeed = playerMovement.walkFootSpeed;
             FOV = 60;
         }
         else if (Light.Count <= 0 && Follow.Count > 0 && Shadow.Count <= 0)
         {
             mentalGain = -0.1f;
             targetSpeed = playerMovement.fearSpeed;
+            playerMovement.moveFootSpeed = playerMovement.fearFootSpeed;
             FOV = 55;
         }
         else if (Light.Count <= 0 && Follow.Count <= 0 && Shadow.Count > 0)
         {
             mentalGain = -5f;
             targetSpeed = playerMovement.sprintSpeed;
+            playerMovement.moveFootSpeed = playerMovement.sprintFootSpeed;
             FOV = 55;
         }
         else if (Light.Count > 0 && Follow.Count > 0 && Shadow.Count <= 0)
         {
             mentalGain = 0.1f;
             targetSpeed = playerMovement.fearSpeed;
+            playerMovement.moveFootSpeed = playerMovement.fearFootSpeed;
             FOV = 60;
         }
         else if (Light.Count > 0 && Follow.Count <= 0 && Shadow.Count > 0)
         {
             mentalGain = 0.1f;
             targetSpeed = playerMovement.sprintSpeed;
+            playerMovement.moveFootSpeed = playerMovement.sprintFootSpeed;
             FOV = 60;
         }
         else if (Light.Count <= 0 && Follow.Count > 0 && Shadow.Count > 0)
         {
             mentalGain = -5f;
             targetSpeed = playerMovement.sprintSpeed;
+            playerMovement.moveFootSpeed = playerMovement.sprintFootSpeed;
             FOV = 55;
         }
         else if (Light.Count > 0 && Follow.Count > 0 && Shadow.Count > 0)
         {
             mentalGain = 0.1f;
             targetSpeed = playerMovement.walkSpeed;
+            playerMovement.moveFootSpeed = playerMovement.walkFootSpeed;
             FOV = 60;
         }
         else if (Light.Count <= 0 && Follow.Count <= 0 && Shadow.Count <= 0)
         {
             mentalGain = -0.02f;
             targetSpeed = playerMovement.walkSpeed;
+            playerMovement.moveFootSpeed = playerMovement.walkFootSpeed;
             FOV = 60;
         }
         #endregion
@@ -108,20 +116,6 @@ public class Life : MonoBehaviour
         else if(currentMentalHealth <= 1)
         {
             SceneManager.LoadScene(1);
-            if(CheckPoint != null)
-            {
-                //playerMovement.enabled = false;
-                //transform.position = CheckPoint.transform.position;//new Vector3(CheckPoint.transform.position.x, transform.position.y, transform.position.z);
-                //playerMovement.enabled = true;
-            }
-            else
-            {
-                //playerMovement.enabled = false;
-                //transform.position = Vector3.zero;
-                //playerMovement.enabled = true;
-            }
-            //currentMentalHealth = mentalHealthMax;
-            //StartCoroutine(RegenMental());
         }
         else if(currentMentalHealth > mentalHealthMax)
         {
