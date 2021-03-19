@@ -16580,7 +16580,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: d1b78891814ff1b42b64864be02c4271, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1899267839359168374, guid: e1a61f7f5785dda4dae1b21d053d8b26, type: 3}
     - target: {fileID: 919132149155446097, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
       propertyPath: m_Name
       value: SM_Room_Furniture2 (5)
@@ -33322,7 +33326,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: d1b78891814ff1b42b64864be02c4271, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1899267839359168374, guid: e1a61f7f5785dda4dae1b21d053d8b26, type: 3}
     - target: {fileID: 919132149155446097, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
       propertyPath: m_Name
       value: SM_Room_Furniture2 (2)
@@ -56730,7 +56738,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: d1b78891814ff1b42b64864be02c4271, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1899267839359168374, guid: e1a61f7f5785dda4dae1b21d053d8b26, type: 3}
     - target: {fileID: 919132149155446097, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
       propertyPath: m_Name
       value: SM_Room_Furniture2 (1)
@@ -67473,7 +67485,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: d1b78891814ff1b42b64864be02c4271, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1899267839359168374, guid: e1a61f7f5785dda4dae1b21d053d8b26, type: 3}
     - target: {fileID: 919132149155446097, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
       propertyPath: m_Name
       value: SM_Room_Furniture2 (4)
@@ -71394,7 +71410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 15842298260206b419be9c33abc0d825, type: 3}
       propertyPath: m_LocalScale.x
-      value: 16.351448
+      value: 16.9401
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 15842298260206b419be9c33abc0d825, type: 3}
       propertyPath: m_LocalScale.y
@@ -76744,7 +76760,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: d1b78891814ff1b42b64864be02c4271, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1899267839359168374, guid: e1a61f7f5785dda4dae1b21d053d8b26, type: 3}
     - target: {fileID: 919132149155446097, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
       propertyPath: m_Name
       value: SM_Room_Furniture2 (6)
@@ -86719,7 +86739,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: d1b78891814ff1b42b64864be02c4271, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1899267839359168374, guid: e1a61f7f5785dda4dae1b21d053d8b26, type: 3}
     - target: {fileID: 919132149155446097, guid: 830792c665b2b0145ae0778a8bb73105, type: 3}
       propertyPath: m_Name
       value: SM_Room_Furniture2
