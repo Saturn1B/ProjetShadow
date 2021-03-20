@@ -1375,6 +1375,36 @@ Transform:
   m_Father: {fileID: 1183997019}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &457585449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 457585450}
+  m_Layer: 0
+  m_Name: SM_Corridor_Bin (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &457585450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457585449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 458038218}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &458038217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,6 +1441,7 @@ Transform:
   - {fileID: 1725528080}
   - {fileID: 2118599841}
   - {fileID: 188328634}
+  - {fileID: 457585450}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2225,11 +2256,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ad0857cdcc88ca45a478c3bda955e02, type: 3}
---- !u!4 &740035650 stripped
+--- !u!4 &740035650
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5ad0857cdcc88ca45a478c3bda955e02, type: 3}
   m_PrefabInstance: {fileID: 740035649}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929311815}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 458038218}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &755782461
 GameObject:
   m_ObjectHideFlags: 0
@@ -7705,6 +7745,7 @@ MonoBehaviour:
   Obj: {fileID: 481418097}
   Fire: {fileID: 759173894}
   LightSource: {fileID: 1800740751}
+  control: {fileID: 0}
 --- !u!135 &940605493
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8570,6 +8611,10 @@ MonoBehaviour:
   fearSpeed: 9
   sprintSpeed: 13
   moveSpeed: 0
+  walkFootSpeed: 0
+  fearFootSpeed: 0
+  sprintFootSpeed: 0
+  moveFootSpeed: 0
   gravity: -20
   groundCheck: {fileID: 477838656}
   groundMask:
@@ -8577,6 +8622,9 @@ MonoBehaviour:
     m_Bits: 256
   groundDistance: 0.1
   jumpHight: 1.5
+  control: {fileID: 0}
+  foots: []
+  footSteps: {fileID: 0}
 --- !u!114 &1022500325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8594,6 +8642,7 @@ MonoBehaviour:
   lighter: {fileID: 851209435}
   lightText: {fileID: 2067497088}
   life: {fileID: 1022500326}
+  control: {fileID: 0}
 --- !u!114 &1022500326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8612,6 +8661,9 @@ MonoBehaviour:
   mentalHealthSlider: {fileID: 1368756217}
   CheckPoint: {fileID: 0}
   playerMovement: {fileID: 1022500324}
+  lighter: {fileID: 0}
+  camera: {fileID: 0}
+  isPaused: 0
 --- !u!1001 &1079449438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9059,6 +9111,145 @@ Transform:
   - {fileID: 1394788338}
   m_Father: {fileID: 458038218}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1201474092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1201474094}
+  - component: {fileID: 1201474093}
+  m_Layer: 0
+  m_Name: ControlSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1201474093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201474092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 362c7c792073a054294d38b866dd011b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Right:
+    m_Name: Right
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 53473f41-cfae-49c0-8f94-3c1b6dc98cb2
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 057612d5-2faf-49f9-8e2d-e06365e7a79f
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Right
+      m_Flags: 0
+  Left:
+    m_Name: Left
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9271aeb4-f06f-4df3-b5dd-48ea2b6bbde0
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: c678b671-f757-40e0-b2f2-5892736902e2
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Left
+      m_Flags: 0
+  Jump:
+    m_Name: Jump
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 84404e17-e823-4281-b337-075afd5c435f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 22de96bc-4831-4e68-90c6-30410884dc84
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Jump
+      m_Flags: 0
+  Pick:
+    m_Name: Pick
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3c15c1e7-2175-429d-9ae8-5be76731d4c3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 1efdcd31-abce-4018-a1e9-575e912955d3
+      m_Path: <Keyboard>/ctrl
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pick
+      m_Flags: 0
+  Light:
+    m_Name: Light
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: dbc74723-afea-49a9-ae52-c41903682aa2
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 748e486d-ccb7-4a04-b8b0-6244935fce29
+      m_Path: <Keyboard>/shift
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Light
+      m_Flags: 0
+  Flame:
+    m_Name: Flame
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 0fe9f1b9-d48d-46c8-a99d-8c8f1cdcdef4
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: a7415286-439b-492d-994d-66b74673e839
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Flame
+      m_Flags: 0
+--- !u!4 &1201474094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201474092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -207.81554, y: 5.1303635, z: -4.7838345}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1212285886
 PrefabInstance:
@@ -10589,6 +10780,7 @@ GameObject:
   - component: {fileID: 1800740755}
   - component: {fileID: 1800740754}
   - component: {fileID: 1800740753}
+  - component: {fileID: 1800740756}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Light
@@ -10701,6 +10893,102 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!82 &1800740756
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800740751}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5cd9262dd5cf22e4bb65e8b7cb98d9c2, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 682cf87ef25ee9f4d838cdad11c2fad2, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1848626732
 GameObject:
   m_ObjectHideFlags: 0
@@ -10884,6 +11172,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891335425}
   m_CullTransparentMesh: 1
+--- !u!1 &1929311815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 740035650}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1930958394
 GameObject:
   m_ObjectHideFlags: 0

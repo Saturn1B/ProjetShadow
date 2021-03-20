@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Sprinkler : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Sprinkler : MonoBehaviour
         if(State == STATE.OFF)
         {
             gameObject.GetComponent<ParticleSystem>().Stop();
+            gameObject.GetComponent<AudioSource>().Stop();
         }
     }
 
@@ -39,11 +41,13 @@ public class Sprinkler : MonoBehaviour
             {
                 sprinkler.State = STATE.ON;
                 sprinkler.gameObject.GetComponent<ParticleSystem>().Play();
+                sprinkler.gameObject.GetComponent<AudioSource>().Play();
             }
             else
             {
                 sprinkler.State = STATE.OFF;
                 sprinkler.gameObject.GetComponent<ParticleSystem>().Stop();
+                sprinkler.gameObject.GetComponent<AudioSource>().Stop();
             }
         }
     }
@@ -51,6 +55,7 @@ public class Sprinkler : MonoBehaviour
     IEnumerator ActivateSprinkler()
     {
         gameObject.GetComponent<ParticleSystem>().Play();
+        gameObject.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(0.2f);
         CheckNeighboor();
         State = STATE.ON;

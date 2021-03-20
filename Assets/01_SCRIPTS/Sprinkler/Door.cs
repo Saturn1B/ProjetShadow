@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Door : MonoBehaviour
 {
@@ -34,7 +35,10 @@ public class Door : MonoBehaviour
 
     void OpenDoor()
     {
+        GetComponent<AudioSource>().Play();
         open = true;
-        Destroy(gameObject);
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<Collider>().enabled = false;
+        //Destroy(gameObject);
     }
 }
