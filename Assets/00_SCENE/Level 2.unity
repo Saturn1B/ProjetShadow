@@ -68465,7 +68465,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 95b2e51b40d14124983286ddace1c4b8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+      objectReference: {fileID: 2100000, guid: b143f56917758a741b0e59643acdb6dd, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 95b2e51b40d14124983286ddace1c4b8, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -4248355281360383206, guid: ebe92da808980994895da1ed2eae9287, type: 3}
     - target: {fileID: 919132149155446097, guid: 95b2e51b40d14124983286ddace1c4b8, type: 3}
       propertyPath: m_Name
       value: SM_Radiographie_Bed
