@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using UnityEngine.Audio;
 
 public class Life : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class Life : MonoBehaviour
     float targetSpeed;
     float FOV;
 
+    public AudioSource audioSource;
+    public AudioClip rising;
+    public AudioClip falling;
+    public float heartSpeed;
+
     private void Awake()
     {
         lighter = gameObject.GetComponent<Lighter>();
@@ -34,6 +40,7 @@ public class Life : MonoBehaviour
     void Start()
     {
         currentMentalHealth = mentalHealthMax;
+        StartCoroutine(HeartBeat());
     }
 
     // Update is called once per frame
@@ -241,6 +248,20 @@ public class Life : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             playerMovement.enabled = true;
         }
+    }
+
+    IEnumerator HeartBeat()
+    {
+        heartSpeed = Mathf.Clamp(mentalHealthSlider.value * 0.001f, 0.1f, 1);
+        audioSource.Stop();
+        audioSource.clip = rising;
+        audioSource.Play();
+        yield return new WaitForSeconds(heartSpeed);
+        audioSource.Stop();
+        audioSource.clip = falling;
+        audioSource.Play();
+        yield return new WaitForSeconds(heartSpeed*2);
+        StartCoroutine(HeartBeat());
     }
 }
 
