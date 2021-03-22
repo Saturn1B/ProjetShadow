@@ -70,7 +70,8 @@ public class LighterDetection : MonoBehaviour
         //Fire.gameObject.transform.parent = null;
         Obj.GetComponent<Renderer>().enabled = false;
         Obj.GetComponent<Collider>().enabled = false;
-        yield return new WaitForSeconds(1.5f);
+        Fire.Stop();
+        yield return new WaitForSeconds(0.5f);
         life.Light.Remove(LightSource);
         LightSource.SetActive(false);
         Destroy(Obj);
