@@ -29,8 +29,10 @@ public class PlayerMovement : MonoBehaviour
     public ControlSettings control;
 
     public AudioClip[] foots;
+    public AudioClip[] waterFoots;
     public AudioSource footSteps;
     bool isPressed = false;
+    bool inShower;
 
     private void Start()
     {
@@ -131,20 +133,38 @@ public class PlayerMovement : MonoBehaviour
         if(control.Right.ReadValue<float>() > 0 || control.Left.ReadValue<float>() > 0)
         {
             footSteps.Stop();
-            footSteps.clip = foots[Random.Range(0, foots.Length)];
+            if (!inShower) { footSteps.clip = foots[Random.Range(0, foots.Length)]; }
+            else { footSteps.clip = waterFoots[Random.Range(0, waterFoots.Length)]; }
             footSteps.Play();
         }
         yield return new WaitForSeconds(moveFootSpeed/2);
         if (control.Right.ReadValue<float>() > 0 || control.Left.ReadValue<float>() > 0)
         {
             footSteps.Stop();
-            footSteps.clip = foots[Random.Range(0, foots.Length)];
+            if (!inShower) { footSteps.clip = foots[Random.Range(0, foots.Length)]; }
+            else { footSteps.clip = waterFoots[Random.Range(0, waterFoots.Length)]; }
             footSteps.Play();
         }
         yield return new WaitForSeconds(moveFootSpeed / 2);
         if (control.Right.ReadValue<float>() > 0 || control.Left.ReadValue<float>() > 0)
         {
             StartCoroutine(Steps());
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Shower"))
+        {
+            inShower = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Shower"))
+        {
+            inShower = false;
         }
     }
 }

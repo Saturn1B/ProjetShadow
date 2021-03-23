@@ -1057,7 +1057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7795633418941932388, guid: 78931a6c543bcdb4bb30125efa3b79a2, type: 3}
       propertyPath: sprinklers.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7795633418941932388, guid: 78931a6c543bcdb4bb30125efa3b79a2, type: 3}
       propertyPath: sprinklers.Array.data[0]
@@ -71108,6 +71108,8 @@ MonoBehaviour:
   mentalHealthMax: 500
   currentMentalHealth: 0
   Light: []
+  Follow: []
+  Shadow: []
   mentalHealthSlider: {fileID: 1995216451}
   CheckPoint: {fileID: 0}
   playerMovement: {fileID: 1626401410}
@@ -71168,6 +71170,9 @@ MonoBehaviour:
   foots:
   - {fileID: 8300000, guid: 270cbb79f2e995f48bd1968c8dea8302, type: 3}
   - {fileID: 8300000, guid: aa0116e3b16ec5f43bfd4d0e4f46c3ec, type: 3}
+  waterFoots:
+  - {fileID: 8300000, guid: 187a83490f8772449b6d265dba506f70, type: 3}
+  - {fileID: 8300000, guid: 05ee9ebe1972f034da06d1452ed715b7, type: 3}
   footSteps: {fileID: 1626401413}
 --- !u!143 &1626401411
 CharacterController:
@@ -95343,6 +95348,67 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0172455, y: 0.6195733, z: 0.027443571}
   m_Center: {x: -0.50824666, y: 0.3097382, z: -0.00000007384733}
+--- !u!1 &2138941017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2138941020}
+  - component: {fileID: 2138941019}
+  - component: {fileID: 2138941018}
+  m_Layer: 0
+  m_Name: EndChase
+  m_TagString: EndChase
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &2138941018
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138941017}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &2138941019
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138941017}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.0468597, y: 10.502917, z: 10.307907}
+  m_Center: {x: 0.5778961, y: 2.794083, z: 0.29238605}
+--- !u!4 &2138941020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138941017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 106.422104, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 76
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2139869986
 PrefabInstance:
   m_ObjectHideFlags: 0

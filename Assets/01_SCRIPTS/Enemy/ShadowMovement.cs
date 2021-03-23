@@ -7,6 +7,7 @@ public class ShadowMovement : MonoBehaviour
     public bool detectPlayer;
     public bool detectLight;
     public bool runAway;
+    public bool disappear;
     public Transform player;
     public float speed;
     Vector3 startPos;
@@ -24,21 +25,26 @@ public class ShadowMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(LightSource == null || LightSource.activeSelf == false || (LightSource.transform.parent != null && LightSource.transform.parent.gameObject.activeSelf == false))
+        if (disappear)
+        {
+            StartCoroutine(DestroyShadow());
+        }
+
+        if(LightSource == null || LightSource.activeSelf == false || (LightSource.transform.parent != null && LightSource.transform.parent.gameObject.activeSelf == false) && !disappear)
         {
             detectLight = false;
         }
 
-        if (detectPlayer && !detectLight && !runAway)
+        if (detectPlayer && !detectLight && !runAway && !disappear)
         {
             Vector3 targetPos = new Vector3(player.position.x, transform.position.y, transform.position.z);
             transform.position = Vector3.MoveTowards(transform.position, targetPos, speed*Time.deltaTime);
         }
-        else if (detectPlayer && detectLight)
+        else if (detectPlayer && detectLight && !disappear)
         {
             runAway = true;
         }
-        if (runAway)
+        if (runAway && !disappear)
         {
             if(LightSource != null && LightSource.transform.position.x > transform.position.x && first)
             {
@@ -85,5 +91,21 @@ public class ShadowMovement : MonoBehaviour
                 transform.position += new Vector3((speed+5) * Time.deltaTime * -orientation, 0, 0);
             }
         }
+    }
+
+    IEnumerator DestroyShadow()
+    {
+        Vector3 back = new Vector3(transform.position.x - (distanceFromLight / 4), transform.position.y + 10, transform.position.z);
+        while(transform.position.x > back.x)
+        {
+            transform.position -= new Vector3((speed) * Time.deltaTime, 0, 0);
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+        while(transform.position.y < back.y)
+        {
+            transform.position += new Vector3(0, (speed) * Time.deltaTime, 0);
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+        Destroy(gameObject);
     }
 }

@@ -13,6 +13,8 @@ TagManager:
   - Death
   - Sprinkler
   - Wind
+  - Shower
+  - EndChase
   layers:
   - Default
   - TransparentFX

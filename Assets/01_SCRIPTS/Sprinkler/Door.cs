@@ -39,6 +39,7 @@ public class Door : MonoBehaviour
         open = true;
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Collider>().enabled = false;
+        Destroy(gameObject.transform.GetChild(0).gameObject);
         //Destroy(gameObject);
     }
 }

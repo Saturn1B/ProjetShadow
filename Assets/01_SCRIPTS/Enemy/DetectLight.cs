@@ -13,6 +13,10 @@ public class DetectLight : MonoBehaviour
             shadowMovement.detectLight = true;
             shadowMovement.LightSource = other.gameObject;
         }
+        if (other.CompareTag("EndChase"))
+        {
+            shadowMovement.disappear = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)

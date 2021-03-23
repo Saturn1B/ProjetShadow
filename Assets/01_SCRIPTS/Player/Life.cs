@@ -11,8 +11,8 @@ public class Life : MonoBehaviour
     public float mentalHealthMax;
     public float currentMentalHealth;
     public List<GameObject> Light = new List<GameObject>();
-    List<GameObject> Follow = new List<GameObject>();
-    List<GameObject> Shadow = new List<GameObject>();
+    public List<GameObject> Follow = new List<GameObject>();
+    public List<GameObject> Shadow = new List<GameObject>();
     float mentalGain = -0.02f;
     public Slider mentalHealthSlider;
     public GameObject CheckPoint;
@@ -195,7 +195,7 @@ public class Life : MonoBehaviour
         {
             while(playerMovement.moveSpeed > targetSpeed)
             {
-                playerMovement.moveSpeed -= 0.001f;
+                playerMovement.moveSpeed -= 0.002f;
                 yield return new WaitForSeconds(Time.deltaTime / 2);
             }
             playerMovement.moveSpeed = targetSpeed;
@@ -204,7 +204,7 @@ public class Life : MonoBehaviour
         {
             while (playerMovement.moveSpeed < targetSpeed)
             {
-                playerMovement.moveSpeed += 0.001f;
+                playerMovement.moveSpeed += 0.002f;
                 yield return new WaitForSeconds(Time.deltaTime / 2);
             }
             playerMovement.moveSpeed = targetSpeed;

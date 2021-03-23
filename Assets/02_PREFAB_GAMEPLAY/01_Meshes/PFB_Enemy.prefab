@@ -250,6 +250,7 @@ MonoBehaviour:
   detectPlayer: 0
   detectLight: 0
   runAway: 0
+  disappear: 0
   player: {fileID: 0}
   speed: 15
   distanceFromLight: 15
