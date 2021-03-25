@@ -74,6 +74,6 @@ public class LighterDetection : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         life.Light.Remove(LightSource);
         LightSource.SetActive(false);
-        Destroy(Obj);
+        Destroy(gameObject.transform.parent.gameObject);
     }
 }
