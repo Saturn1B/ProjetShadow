@@ -253,7 +253,7 @@ MonoBehaviour:
   disappear: 0
   player: {fileID: 0}
   speed: 15
-  distanceFromLight: 15
+  distanceFromLight: 13.5
   LightSource: {fileID: 0}
 --- !u!82 &-4204380630501591596
 AudioSource:
