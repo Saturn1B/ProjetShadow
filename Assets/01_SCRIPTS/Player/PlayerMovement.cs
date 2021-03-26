@@ -34,8 +34,12 @@ public class PlayerMovement : MonoBehaviour
     bool isPressed = false;
     bool inShower;
 
+    public AudioMixerSnapshot fadeIN;
+
     private void Start()
     {
+        fadeIN.TransitionTo(4); 
+
         moveSpeed = walkSpeed;
         moveFootSpeed = walkFootSpeed;
         control = GameObject.Find("ControlSettings").GetComponent<ControlSettings>();
