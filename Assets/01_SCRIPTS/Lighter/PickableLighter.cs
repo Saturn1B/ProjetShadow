@@ -12,7 +12,8 @@ public class PickableLighter : MonoBehaviour
     public GameObject player;
     bool canPickUp = false;
     public Lighter lighter;
-    public Text lightText;
+    public Image lightCounter;
+    public Sprite[] numbers;
 
     public ControlSettings control;
 
@@ -20,7 +21,7 @@ public class PickableLighter : MonoBehaviour
     {
         player = GameObject.Find("Player");
         lighter = player.GetComponent<Lighter>();
-        lightText = GameObject.Find("LightNumber").GetComponent<Text>();
+        lightCounter = GameObject.Find("LighterImage").GetComponent<Image>();
         control = GameObject.Find("ControlSettings").GetComponent<ControlSettings>();
     }
 
@@ -34,7 +35,8 @@ public class PickableLighter : MonoBehaviour
         if(canPickUp && control.Pick.triggered)
         {
             lighter.lightNumber += lightNumber;
-            lightText.text = (lighter.lightNumber).ToString();
+            if(lighter.lightNumber > 0) { lightCounter.sprite = numbers[lighter.lightNumber - 1]; lightCounter.color = Color.white; }
+            else { lightCounter.sprite = null; lightCounter.color = Color.clear; }
             Destroy(gameObject);
         }
     }

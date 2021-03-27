@@ -91,14 +91,14 @@ public class PlayerMovement : MonoBehaviour
         {
             StopAllCoroutines();
             StartCoroutine(Steps());
-            StartCoroutine(JumpEnd());
+            StartCoroutine(JumpEnd(0.1f));
             isPressed = true;
         }
         else if(x == 0 && isPressed)
         {
             footSteps.Stop();
             StopAllCoroutines();
-            StartCoroutine(JumpEnd());
+            StartCoroutine(JumpEnd(0.1f));
             isPressed = false;
         }
 
@@ -122,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHight * -2 * gravity);
             animator.SetBool("Jumping", true);
-            StartCoroutine(JumpEnd());
+            StartCoroutine(JumpEnd(0.3f));
         }
     }
 
@@ -161,9 +161,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    IEnumerator JumpEnd()
+    IEnumerator JumpEnd(float timer)
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(timer);
         Debug.Log("connard");
         animator.SetBool("Jumping", false);
     }

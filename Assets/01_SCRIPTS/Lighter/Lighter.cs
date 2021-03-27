@@ -10,15 +10,17 @@ public class Lighter : MonoBehaviour
     public int lightNumber;
     public float lightTimer;
     public GameObject lighter;
-    public Text lightText;
     public Life life;
+    public Image lightCounter;
+    public Sprite[] numbers;
 
     public ControlSettings control;
 
     private void Start()
     {
         control = GameObject.Find("ControlSettings").GetComponent<ControlSettings>();
-        lightText.text = lightNumber.ToString();
+        if (lightNumber > 0) { lightCounter.sprite = numbers[lightNumber - 1]; lightCounter.color = Color.white; }
+        else { lightCounter.sprite = null; lightCounter.color = Color.clear; }
     }
 
     // Update is called once per frame
@@ -27,7 +29,8 @@ public class Lighter : MonoBehaviour
         if(lightNumber > 0 && control.Light.triggered && !lighter.activeSelf)
         {
             lightNumber--;
-            lightText.text = lightNumber.ToString();
+            if (lightNumber > 0) { lightCounter.sprite = numbers[lightNumber - 1]; lightCounter.color = Color.white; }
+            else { lightCounter.sprite = null; lightCounter.color = Color.clear; }
             lighter.SetActive(true);
             life.Light.Add(lighter);
             StartCoroutine(LighterTimer());

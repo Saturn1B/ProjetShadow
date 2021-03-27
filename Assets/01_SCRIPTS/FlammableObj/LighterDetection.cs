@@ -26,7 +26,7 @@ public class LighterDetection : MonoBehaviour
     {
         if (canLight)
         {
-            if (control.Flame.triggered)
+            if (control.Light.triggered)
             {
                 lighten = lightState.ON;
                 StartCoroutine(EnlightObject());

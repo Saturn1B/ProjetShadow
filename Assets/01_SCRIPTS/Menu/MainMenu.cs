@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject MainMenuPanel, NewGamePanel, SettingsPanel, CurrentPanel, GraphicsPanel, VolumesPanel, ControlPanel;
+    public GameObject MainMenuPanel, NewGamePanel, SettingsPanel, CurrentPanel, GraphicsPanel, VolumesPanel, ControlPanel, LoadingPanel;
     public Button LoadGameButton;
+    public Slider loadingSlider;
     public bool hasSave;
 
     public GameObject controlSettings;
@@ -35,8 +36,10 @@ public class MainMenu : MonoBehaviour
     {
         if (!hasSave)
         {
+            MainMenuPanel.SetActive(false);
             DontDestroyOnLoad(controlSettings);
-            SceneManager.LoadScene(1);
+            //SceneManager.LoadScene(1);
+            StartCoroutine(LoadAsync());
         }
         else
         {
@@ -48,8 +51,10 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGame()
     {
+        MainMenuPanel.SetActive(false);
         DontDestroyOnLoad(controlSettings);
-        SceneManager.LoadScene(1);
+        //SceneManager.LoadScene(1);
+        StartCoroutine(LoadAsync());
     }
 
     public void Settings()
@@ -88,7 +93,10 @@ public class MainMenu : MonoBehaviour
     public void Continue()
     {
         PlayerPrefs.DeleteAll();
-        SceneManager.LoadScene(1);
+        NewGamePanel.SetActive(false);
+        DontDestroyOnLoad(controlSettings);
+        //SceneManager.LoadScene(1);
+        StartCoroutine(LoadAsync());
     }
 
     public void Back()
@@ -103,5 +111,19 @@ public class MainMenu : MonoBehaviour
         CurrentPanel.SetActive(false);
         SettingsPanel.SetActive(true);
         CurrentPanel = SettingsPanel;
+    }
+
+    IEnumerator LoadAsync()
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(1);
+
+        LoadingPanel.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            loadingSlider.value = progress;
+            yield return null;
+        }
     }
 }

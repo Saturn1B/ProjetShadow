@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEditor;
+//using UnityEditor;
 using UnityEngine.Audio;
 
 public class Life : MonoBehaviour
@@ -54,7 +54,7 @@ public class Life : MonoBehaviour
         #region
         if (Light.Count > 0 && Follow.Count <= 0 && Shadow.Count <= 0)
         {
-            mentalGain = 0.1f;
+            mentalGain = 0.05f;
             targetSpeed = playerMovement.walkSpeed;
             playerMovement.moveFootSpeed = playerMovement.walkFootSpeed;
             animator.SetFloat("Blend", 0);
@@ -78,7 +78,7 @@ public class Life : MonoBehaviour
         }
         else if (Light.Count > 0 && Follow.Count > 0 && Shadow.Count <= 0)
         {
-            mentalGain = 0.1f;
+            mentalGain = 0.0f;
             targetSpeed = playerMovement.fearSpeed;
             playerMovement.moveFootSpeed = playerMovement.fearFootSpeed;
             animator.SetFloat("Blend", 0.75f);
@@ -86,7 +86,7 @@ public class Life : MonoBehaviour
         }
         else if (Light.Count > 0 && Follow.Count <= 0 && Shadow.Count > 0)
         {
-            mentalGain = 0.1f;
+            mentalGain = -0.01f;
             targetSpeed = playerMovement.sprintSpeed;
             playerMovement.moveFootSpeed = playerMovement.sprintFootSpeed;
             animator.SetFloat("Blend", 1);
@@ -102,7 +102,7 @@ public class Life : MonoBehaviour
         }
         else if (Light.Count > 0 && Follow.Count > 0 && Shadow.Count > 0)
         {
-            mentalGain = 0.1f;
+            mentalGain = -0.01f;
             targetSpeed = playerMovement.walkSpeed;
             playerMovement.moveFootSpeed = playerMovement.walkFootSpeed;
             animator.SetFloat("Blend", 0);
@@ -110,7 +110,7 @@ public class Life : MonoBehaviour
         }
         else if (Light.Count <= 0 && Follow.Count <= 0 && Shadow.Count <= 0)
         {
-            mentalGain = -0.02f;
+            mentalGain = -0.04f;
             targetSpeed = playerMovement.walkSpeed;
             playerMovement.moveFootSpeed = playerMovement.walkFootSpeed;
             animator.SetFloat("Blend", 0);
@@ -278,7 +278,7 @@ public class Life : MonoBehaviour
     }
 }
 
-[CustomEditor(typeof(Life))]
+/*[CustomEditor(typeof(Life))]
 class LifeEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -289,4 +289,4 @@ class LifeEditor : Editor
             PlayerPrefs.DeleteAll();
         }
     }
-}
+}*/

@@ -7,6 +7,7 @@ public class Door : MonoBehaviour
 {
     public Sprinkler[] sprinklers;
     bool open;
+    public GameObject doorVisual;
 
     // Update is called once per frame
     void Update()
@@ -37,8 +38,8 @@ public class Door : MonoBehaviour
     {
         GetComponent<AudioSource>().Play();
         open = true;
-        GetComponent<MeshRenderer>().enabled = false;
-        GetComponent<Collider>().enabled = false;
+        doorVisual.GetComponent<MeshRenderer>().enabled = false;
+        doorVisual.GetComponent<Collider>().enabled = false;
         Destroy(gameObject.transform.GetChild(0).gameObject);
         //Destroy(gameObject);
     }

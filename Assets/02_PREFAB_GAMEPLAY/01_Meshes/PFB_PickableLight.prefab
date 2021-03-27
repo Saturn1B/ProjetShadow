@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 670073315aaa8574f9f1549656a5baa6, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,4 +112,26 @@ MonoBehaviour:
   distance: 3
   player: {fileID: 0}
   lighter: {fileID: 0}
-  lightText: {fileID: 0}
+  lightCounter: {fileID: 0}
+  numbers:
+  - {fileID: -855298285791758126, guid: c6dc3344bb9a57a42bf3fe554e5e6caa, type: 3}
+  - {fileID: 6937817954938267909, guid: 3d335ac9fe4e12f4ca7abe9333027540, type: 3}
+  - {fileID: -6470460504253458178, guid: 6ceebfcafd6ba7442bd33e185f70e68f, type: 3}
+  - {fileID: -4178046375966092550, guid: 18dfc035f59e85344adde568c3f7a0ed, type: 3}
+  - {fileID: 4130640169021434097, guid: 5a719a1d7c2400540a9fb7dc38d3c39c, type: 3}
+  - {fileID: 3465286685962602723, guid: d991e647b9f2f9a49bd15f564f7f04cb, type: 3}
+  - {fileID: 7028616704906629411, guid: 9aafff06dcaf66844bad8d1a6dd9da2f, type: 3}
+  - {fileID: 8288426215254106694, guid: 4fa9ae04dc54bfb44b7f50de4588449f, type: 3}
+  - {fileID: 4113829005332862926, guid: be3b3c8ab98faa44e91b7b5eb3ecc91e, type: 3}
+  - {fileID: -5099292496197868168, guid: ac6d4afac6be4864b874df79d56fba60, type: 3}
+  - {fileID: -2966200626249415253, guid: 084f4e55a6255cf46b791204691d6197, type: 3}
+  - {fileID: -1540426309290004842, guid: 094cebb19832ac7419f1f10a99f31ba6, type: 3}
+  - {fileID: 8389134475083476877, guid: 7ac0034fa877e8a42b8cd81904228642, type: 3}
+  - {fileID: -6270953770400647376, guid: 14c88bd6967785b4eb8c0cd9d79bc4c6, type: 3}
+  - {fileID: 4349915267927364619, guid: a40d2ec46bd40bd47b1c27ad135ec1cc, type: 3}
+  - {fileID: 7680820834086852892, guid: a47879799c940ef4485baa618a4afea8, type: 3}
+  - {fileID: 6660783624410144326, guid: 049fec53d3441fd4390950ae0f15f25f, type: 3}
+  - {fileID: 2960402581040015946, guid: 0062f51a3a776a74e84083b7ec21c65c, type: 3}
+  - {fileID: 7157561037332017152, guid: d7dac0ad0e31d0a44b31e2768e0c04ef, type: 3}
+  - {fileID: 4164744761163438241, guid: 34f6df24073a89d49943e62b25d1ba0b, type: 3}
+  control: {fileID: 0}
