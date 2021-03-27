@@ -29,6 +29,8 @@ public class Life : MonoBehaviour
     public AudioClip falling;
     public float heartSpeed;
 
+    public Image Handle;
+
     public Animator animator;
 
     private void Awake()
@@ -129,6 +131,7 @@ public class Life : MonoBehaviour
         if (currentMentalHealth > 0 && currentMentalHealth <= mentalHealthMax && !isPaused)
         {
             currentMentalHealth += mentalGain;
+            Handle.color = new Color(currentMentalHealth / 500, currentMentalHealth / 500, currentMentalHealth / 500);
         }
         else if(currentMentalHealth <= 1)
         {
@@ -263,11 +266,11 @@ public class Life : MonoBehaviour
     IEnumerator HeartBeat()
     {
         heartSpeed = Mathf.Clamp(mentalHealthSlider.value * 0.001f, 0.1f, 1);
-        audioSource.Stop();
+        //audioSource.Stop();
         audioSource.clip = rising;
         audioSource.Play();
         yield return new WaitForSeconds(heartSpeed);
-        audioSource.Stop();
+        //audioSource.Stop();
         audioSource.clip = falling;
         audioSource.Play();
         yield return new WaitForSeconds(heartSpeed*2);
