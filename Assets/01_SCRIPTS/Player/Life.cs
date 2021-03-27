@@ -29,6 +29,8 @@ public class Life : MonoBehaviour
     public AudioClip falling;
     public float heartSpeed;
 
+    public Animator animator;
+
     private void Awake()
     {
         lighter = gameObject.GetComponent<Lighter>();
@@ -53,6 +55,7 @@ public class Life : MonoBehaviour
             mentalGain = 0.1f;
             targetSpeed = playerMovement.walkSpeed;
             playerMovement.moveFootSpeed = playerMovement.walkFootSpeed;
+            animator.SetFloat("Blend", 0);
             FOV = 60;
         }
         else if (Light.Count <= 0 && Follow.Count > 0 && Shadow.Count <= 0)
@@ -60,6 +63,7 @@ public class Life : MonoBehaviour
             mentalGain = -0.1f;
             targetSpeed = playerMovement.fearSpeed;
             playerMovement.moveFootSpeed = playerMovement.fearFootSpeed;
+            animator.SetFloat("Blend", 0.75f);
             FOV = 55;
         }
         else if (Light.Count <= 0 && Follow.Count <= 0 && Shadow.Count > 0)
@@ -67,6 +71,7 @@ public class Life : MonoBehaviour
             mentalGain = -5f;
             targetSpeed = playerMovement.sprintSpeed;
             playerMovement.moveFootSpeed = playerMovement.sprintFootSpeed;
+            animator.SetFloat("Blend", 1);
             FOV = 55;
         }
         else if (Light.Count > 0 && Follow.Count > 0 && Shadow.Count <= 0)
@@ -74,6 +79,7 @@ public class Life : MonoBehaviour
             mentalGain = 0.1f;
             targetSpeed = playerMovement.fearSpeed;
             playerMovement.moveFootSpeed = playerMovement.fearFootSpeed;
+            animator.SetFloat("Blend", 0.75f);
             FOV = 60;
         }
         else if (Light.Count > 0 && Follow.Count <= 0 && Shadow.Count > 0)
@@ -81,6 +87,7 @@ public class Life : MonoBehaviour
             mentalGain = 0.1f;
             targetSpeed = playerMovement.sprintSpeed;
             playerMovement.moveFootSpeed = playerMovement.sprintFootSpeed;
+            animator.SetFloat("Blend", 1);
             FOV = 60;
         }
         else if (Light.Count <= 0 && Follow.Count > 0 && Shadow.Count > 0)
@@ -88,6 +95,7 @@ public class Life : MonoBehaviour
             mentalGain = -5f;
             targetSpeed = playerMovement.sprintSpeed;
             playerMovement.moveFootSpeed = playerMovement.sprintFootSpeed;
+            animator.SetFloat("Blend", 1);
             FOV = 55;
         }
         else if (Light.Count > 0 && Follow.Count > 0 && Shadow.Count > 0)
@@ -95,6 +103,7 @@ public class Life : MonoBehaviour
             mentalGain = 0.1f;
             targetSpeed = playerMovement.walkSpeed;
             playerMovement.moveFootSpeed = playerMovement.walkFootSpeed;
+            animator.SetFloat("Blend", 0);
             FOV = 60;
         }
         else if (Light.Count <= 0 && Follow.Count <= 0 && Shadow.Count <= 0)
@@ -102,6 +111,7 @@ public class Life : MonoBehaviour
             mentalGain = -0.02f;
             targetSpeed = playerMovement.walkSpeed;
             playerMovement.moveFootSpeed = playerMovement.walkFootSpeed;
+            animator.SetFloat("Blend", 0);
             FOV = 60;
         }
         #endregion

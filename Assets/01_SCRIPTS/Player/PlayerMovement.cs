@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     bool inShower;
 
     public AudioMixerSnapshot fadeIN;
+    public Animator animator;
 
     private void Start()
     {
@@ -73,26 +74,31 @@ public class PlayerMovement : MonoBehaviour
         if (control.Right.ReadValue<float>() > 0)
         {
             x = 1;
+            animator.SetBool("Moving", true);
         }
         else if (control.Left.ReadValue<float>() > 0)
         {
             x = -1;
+            animator.SetBool("Moving", true);
         }
         else
         {
             x = 0;
+            animator.SetBool("Moving", false);
         }
 
-        if(x != 0 && !isPressed)
+        if (x != 0 && !isPressed)
         {
             StopAllCoroutines();
             StartCoroutine(Steps());
+            StartCoroutine(JumpEnd());
             isPressed = true;
         }
         else if(x == 0 && isPressed)
         {
             footSteps.Stop();
             StopAllCoroutines();
+            StartCoroutine(JumpEnd());
             isPressed = false;
         }
 
@@ -115,6 +121,8 @@ public class PlayerMovement : MonoBehaviour
         if (control.Jump.triggered && isGrounded())
         {
             velocity.y = Mathf.Sqrt(jumpHight * -2 * gravity);
+            animator.SetBool("Jumping", true);
+            StartCoroutine(JumpEnd());
         }
     }
 
@@ -123,38 +131,41 @@ public class PlayerMovement : MonoBehaviour
         return Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
     }
 
-    IEnumerator InBetweenStep()
-    {
-        Debug.Log("steps");
-        while (control.Right.ReadValue<float>() > 0 || control.Left.ReadValue<float>() > 0)
-        {
-            StartCoroutine(Steps());
-            yield return new WaitForSeconds(moveFootSpeed);
-        }
-    }
-
     IEnumerator Steps()
     {
         if(control.Right.ReadValue<float>() > 0 || control.Left.ReadValue<float>() > 0)
         {
-            footSteps.Stop();
-            if (!inShower) { footSteps.clip = foots[Random.Range(0, foots.Length)]; }
-            else { footSteps.clip = waterFoots[Random.Range(0, waterFoots.Length)]; }
-            footSteps.Play();
+            
+            
+                footSteps.Stop();
+                if (!inShower) { footSteps.clip = foots[Random.Range(0, foots.Length)]; }
+                else { footSteps.clip = waterFoots[Random.Range(0, waterFoots.Length)]; }
+                footSteps.Play();
+            
         }
         yield return new WaitForSeconds(moveFootSpeed/2);
         if (control.Right.ReadValue<float>() > 0 || control.Left.ReadValue<float>() > 0)
         {
-            footSteps.Stop();
-            if (!inShower) { footSteps.clip = foots[Random.Range(0, foots.Length)]; }
-            else { footSteps.clip = waterFoots[Random.Range(0, waterFoots.Length)]; }
-            footSteps.Play();
+            
+            
+                footSteps.Stop();
+                if (!inShower) { footSteps.clip = foots[Random.Range(0, foots.Length)]; }
+                else { footSteps.clip = waterFoots[Random.Range(0, waterFoots.Length)]; }
+                footSteps.Play();
+            
         }
         yield return new WaitForSeconds(moveFootSpeed / 2);
         if (control.Right.ReadValue<float>() > 0 || control.Left.ReadValue<float>() > 0)
         {
             StartCoroutine(Steps());
         }
+    }
+
+    IEnumerator JumpEnd()
+    {
+        yield return new WaitForSeconds(0.3f);
+        Debug.Log("connard");
+        animator.SetBool("Jumping", false);
     }
 
     private void OnTriggerEnter(Collider other)
