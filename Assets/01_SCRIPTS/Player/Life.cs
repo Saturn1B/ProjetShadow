@@ -43,7 +43,14 @@ public class Life : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentMentalHealth = mentalHealthMax;
+        if (PlayerPrefs.GetFloat("Life") != 0)
+        {
+            currentMentalHealth = PlayerPrefs.GetFloat("Life");
+        }
+        else
+        {
+            currentMentalHealth = mentalHealthMax;
+        }
         StartCoroutine(HeartBeat());
     }
 
@@ -171,6 +178,7 @@ public class Life : MonoBehaviour
             PlayerPrefs.SetFloat("Y", transform.position.y);
             PlayerPrefs.SetFloat("Z", transform.position.z);
             PlayerPrefs.SetInt("Light", lighter.lightNumber);
+            PlayerPrefs.SetFloat("Life", currentMentalHealth);
             Debug.Log(PlayerPrefs.GetFloat("X") + " " + PlayerPrefs.GetFloat("Y") + " " + PlayerPrefs.GetFloat("Z"));
         }
 

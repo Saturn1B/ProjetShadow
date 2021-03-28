@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
     public Sprinkler[] sprinklers;
     bool open;
     public GameObject doorVisual;
+    public GameObject ToDestroy;
 
     // Update is called once per frame
     void Update()
@@ -40,6 +41,7 @@ public class Door : MonoBehaviour
         open = true;
         doorVisual.GetComponent<MeshRenderer>().enabled = false;
         doorVisual.GetComponent<Collider>().enabled = false;
+        if(ToDestroy != null) { Destroy(ToDestroy); }
         Destroy(gameObject.transform.GetChild(0).gameObject);
         //Destroy(gameObject);
     }
